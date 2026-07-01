@@ -1,4 +1,6 @@
-﻿namespace CsharpFundamentalsPart1
+﻿using System.Diagnostics.Metrics;
+
+namespace CsharpFundamentalsPart1
 {
     internal class Program
     {
@@ -31,7 +33,21 @@
                 Console.WriteLine("You are not a student.");
             }
 
+            // Task 2: 
+            // Rectangle Calculator
+            // 
+
+            Console.WriteLine("Enter the length of the rectangle: ");
+            float rLength = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the width of the rectangle: ");
+            float rWidth = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("The area of the rectangle is: " + (rLength * rWidth));
+            Console.WriteLine("The perimeter of the rectangle is: " + (2 * (rLength + rWidth)));
+
             
+
+
 
         }
     }
