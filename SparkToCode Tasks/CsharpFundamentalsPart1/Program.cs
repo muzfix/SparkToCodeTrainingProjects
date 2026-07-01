@@ -180,37 +180,95 @@ namespace CsharpFundamentalsPart1
             // Task 9:
             // Day Name Finder
 
-            Console.WriteLine("Enter a number between 1 and 7 to find out its corresponding day of the week: ");
-            int dayNum = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a number between 1 and 7 to find out its corresponding day of the week: ");
+            //int dayNum = int.Parse(Console.ReadLine());
 
-            switch (dayNum)
+            //switch (dayNum)
+            //{
+            //    case 1:
+            //        Console.WriteLine("1 = Sunday");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("2 = Monday");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("3 = Tuesday");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("4 = Wednesday");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("5 = Thursday");
+            //        break;
+            //    case 6:
+            //        Console.WriteLine("6 = Friday");
+            //        break;
+            //    case 7:
+            //        Console.WriteLine("7 = Saturday");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid number entered.");
+            //        break;
+            //}
+
+            // Task 10:
+            // Mini Calculator
+
+            Console.WriteLine("Enter the first number: ");
+            float firstNum = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            float secondNum = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("+");
+            Console.WriteLine("-");
+            Console.WriteLine("*");
+            Console.WriteLine("/");
+            Console.WriteLine("%");
+
+            Console.WriteLine("Please choose an option: ");
+            string option = Console.ReadLine();
+
+            switch (option)
             {
-                case 1:
-                    Console.WriteLine("1 = Sunday");
+                case "+":
+                    Console.WriteLine(firstNum + secondNum);
                     break;
-                case 2:
-                    Console.WriteLine("2 = Monday");
+
+                case "-":
+                    Console.WriteLine(firstNum - secondNum);
                     break;
-                case 3:
-                    Console.WriteLine("3 = Tuesday");
+
+                case "*":
+                    Console.WriteLine(firstNum * secondNum);
                     break;
-                case 4:
-                    Console.WriteLine("4 = Wednesday");
+
+                case "/":
+                    if (secondNum == 0)
+                    {
+                        Console.WriteLine("Cannot divide by zero");
+                    }
+                    else
+                    {
+                        Console.WriteLine(firstNum / secondNum);
+                    }
                     break;
-                case 5:
-                    Console.WriteLine("5 = Thursday");
+                     
+                case "%":
+                    if (secondNum == 0)
+                    {
+                        Console.WriteLine("Cannot divide by zero");
+                    }
+                    else
+                    {
+                        Console.WriteLine(firstNum / secondNum);
+                    }
+                    Console.WriteLine(firstNum % secondNum);
                     break;
-                case 6:
-                    Console.WriteLine("6 = Friday");
-                    break;
-                case 7:
-                    Console.WriteLine("7 = Saturday");
-                    break;
+
                 default:
-                    Console.WriteLine("Invalid number entered.");
+                    Console.WriteLine("Invalid option.");
                     break;
             }
-
 
 
 
