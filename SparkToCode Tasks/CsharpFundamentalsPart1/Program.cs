@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
+using System.ComponentModel.Design;
 using System.Diagnostics.Metrics;
+using System.Xml;
 
 namespace CsharpFundamentalsPart1
 {
@@ -80,36 +82,59 @@ namespace CsharpFundamentalsPart1
             // Task 5:
             // Grade letter lookup
 
-            Console.WriteLine("Enter your grade letter to find out its meaning (A,B,C,D, or F): ");
-            string userGrade = Console.ReadLine();
-            switch (userGrade)
+            //Console.WriteLine("Enter your grade letter to find out its meaning (A,B,C,D, or F): ");
+            //string userGrade = Console.ReadLine();
+            //switch (userGrade)
+            //{
+            //    case "A":
+            //        Console.WriteLine("A = Excellent");
+            //        break;
+
+            //    case "B":
+            //        Console.WriteLine("B = Very Good");
+            //        break;
+
+            //    case "C":
+            //        Console.WriteLine("C = Good");
+            //        break;
+
+            //    case "D":
+            //        Console.WriteLine("D = Pass");
+            //        break;
+
+            //    case "F":
+            //        Console.WriteLine("F = Fail");
+            //        break;
+            //    default:
+            //        Console.WriteLine("invalid grade");
+            //        break;
+            //}
+
+            //Task 6:
+            //Temperature Converter
+
+            Console.WriteLine("Enter the temp in Celsius: ");
+            float tempCelsius = float.Parse(Console.ReadLine());
+
+            float farenConverted = (tempCelsius * 9 / 5) + 32;
+            Console.WriteLine("The temperature in Fahrenheit is: " + farenConverted);
+
+            if (tempCelsius < 10)
             {
-                case "A":
-                    Console.WriteLine("A = Excellent");
-                    break;
-
-                case "B":
-                    Console.WriteLine("B = Very Good");
-                    break;
-
-                case "C":
-                    Console.WriteLine("C = Good");
-                    break;
-
-                case "D":
-                    Console.WriteLine("D = Pass");
-                    break;
-
-                case "F":
-                    Console.WriteLine("F = Fail");
-                    break;
-                default:
-                    Console.WriteLine("invalid grade");
-                    break;
+                Console.WriteLine("Below 10. Cold.");
             }
-
-
-
+            else if (tempCelsius > 10 && tempCelsius < 30)
+            {
+                Console.WriteLine("Between 10 and 30. Mild.");
+            }
+            else if (tempCelsius > 30)
+            {
+                Console.WriteLine("Above 30. Hot.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid temperature.");
+            }
         }
     }
 }
