@@ -113,28 +113,56 @@ namespace CsharpFundamentalsPart1
             //Task 6:
             //Temperature Converter
 
-            Console.WriteLine("Enter the temp in Celsius: ");
-            float tempCelsius = float.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the temp in Celsius: ");
+            //float tempCelsius = float.Parse(Console.ReadLine());
 
-            float farenConverted = (tempCelsius * 9 / 5) + 32;
-            Console.WriteLine("The temperature in Fahrenheit is: " + farenConverted);
+            //float farenConverted = (tempCelsius * 9 / 5) + 32;
+            //Console.WriteLine("The temperature in Fahrenheit is: " + farenConverted);
 
-            if (tempCelsius < 10)
+            //if (tempCelsius < 10)
+            //{
+            //    Console.WriteLine("Below 10. Cold.");
+            //}
+            //else if (tempCelsius > 10 && tempCelsius < 30)
+            //{
+            //    Console.WriteLine("Between 10 and 30. Mild.");
+            //}
+            //else if (tempCelsius > 30)
+            //{
+            //    Console.WriteLine("Above 30. Hot.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid temperature.");
+            //}
+
+            // Task 7:
+            // Movie Ticket Pricing
+
+            Console.WriteLine("Enter your age to find out your movie price: ");
+            int userAge3 = int.Parse(Console.ReadLine());
+
+            if (userAge3 >= 0 && userAge3 <= 12)
             {
-                Console.WriteLine("Below 10. Cold.");
+                Console.WriteLine("Children: Your ticket price is 2.000 OMR");
             }
-            else if (tempCelsius > 10 && tempCelsius < 30)
+            else if (userAge3 >= 13 && userAge3 <= 59)
             {
-                Console.WriteLine("Between 10 and 30. Mild.");
+                Console.WriteLine("Adults: Your ticket price is 5.000 OMR");
             }
-            else if (tempCelsius > 30)
+            else if (userAge3 >= 60)
             {
-                Console.WriteLine("Above 30. Hot.");
+                Console.WriteLine("Seniors: Your ticket price is 3.000 OMR");
             }
             else
             {
-                Console.WriteLine("Invalid temperature.");
+                Console.WriteLine("Invalid age entered.");
             }
+
+
+
+
+
         }
     }
 }
