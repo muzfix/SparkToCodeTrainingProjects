@@ -45,7 +45,21 @@ namespace CsharpFundamentalsPart1
             Console.WriteLine("The area of the rectangle is: " + (rLength * rWidth));
             Console.WriteLine("The perimeter of the rectangle is: " + (2 * (rLength + rWidth)));
 
-            
+            // Task 3:
+            // Even or Odd Checker
+
+            Console.WriteLine("Enter a number to check if it is odd or even: ");
+            float userNum = float.Parse(Console.ReadLine());
+
+            if (userNum % 2 == 0)
+            {
+                Console.WriteLine("The number is even.");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd.");
+            }
+
 
 
 
