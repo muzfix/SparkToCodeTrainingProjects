@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Metrics;
+﻿using Microsoft.VisualBasic.FileIO;
+using System.Diagnostics.Metrics;
 
 namespace CsharpFundamentalsPart1
 {
@@ -62,20 +63,50 @@ namespace CsharpFundamentalsPart1
 
             // Task 4: voting eligibility checker
 
-            Console.WriteLine("Enter your age to see if you are eligible to vote: ");
-            int userAge2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Do you have a valid national ID? (y/n)");
-            bool userInput2 = Console.ReadLine() == "y";
+            //Console.WriteLine("Enter your age to see if you are eligible to vote: ");
+            //int userAge2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Do you have a valid national ID? (y/n)");
+            //bool userInput2 = Console.ReadLine() == "y";
 
-            if (userAge2 >= 18 && userInput2 == true)
-            {
-                Console.WriteLine("You are eligible to vote");
-            }
-            else
-            {
-                Console.WriteLine("You are not eligible to vote");
-            }
+            //if (userAge2 >= 18 && userInput2 == true)
+            //{
+            //    Console.WriteLine("You are eligible to vote");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("You are not eligible to vote");
+            //}
 
+            // Task 5:
+            // Grade letter lookup
+
+            Console.WriteLine("Enter your grade letter to find out its meaning (A,B,C,D, or F): ");
+            string userGrade = Console.ReadLine();
+            switch (userGrade)
+            {
+                case "A":
+                    Console.WriteLine("A = Excellent");
+                    break;
+
+                case "B":
+                    Console.WriteLine("B = Very Good");
+                    break;
+
+                case "C":
+                    Console.WriteLine("C = Good");
+                    break;
+
+                case "D":
+                    Console.WriteLine("D = Pass");
+                    break;
+
+                case "F":
+                    Console.WriteLine("F = Fail");
+                    break;
+                default:
+                    Console.WriteLine("invalid grade");
+                    break;
+            }
 
 
 
