@@ -139,26 +139,43 @@ namespace CsharpFundamentalsPart1
             // Task 7:
             // Movie Ticket Pricing
 
-            Console.WriteLine("Enter your age to find out your movie price: ");
-            int userAge3 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your age to find out your movie price: ");
+            //int userAge3 = int.Parse(Console.ReadLine());
 
-            if (userAge3 >= 0 && userAge3 <= 12)
+            //if (userAge3 >= 0 && userAge3 <= 12)
+            //{
+            //    Console.WriteLine("Children: Your ticket price is 2.000 OMR");
+            //}
+            //else if (userAge3 >= 13 && userAge3 <= 59)
+            //{
+            //    Console.WriteLine("Adults: Your ticket price is 5.000 OMR");
+            //}
+            //else if (userAge3 >= 60)
+            //{
+            //    Console.WriteLine("Seniors: Your ticket price is 3.000 OMR");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid age entered.");
+            //}
+
+            // Task 8:
+            // Restaurant bill with membership discount
+
+            Console.WriteLine("Enter your bill amount: ");
+            float billAmount = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Are you a member? (y/n)");
+            bool isMember = Console.ReadLine() == "y";
+
+            if (billAmount > 20 && isMember == true)
             {
-                Console.WriteLine("Children: Your ticket price is 2.000 OMR");
-            }
-            else if (userAge3 >= 13 && userAge3 <= 59)
-            {
-                Console.WriteLine("Adults: Your ticket price is 5.000 OMR");
-            }
-            else if (userAge3 >= 60)
-            {
-                Console.WriteLine("Seniors: Your ticket price is 3.000 OMR");
+                Console.WriteLine("You are a member and your bill is above 20. You get a 15% discount. Your total is: " + ((billAmount/100)*85));
             }
             else
             {
-                Console.WriteLine("Invalid age entered.");
+                Console.WriteLine("Your price is: " + billAmount);
             }
-
 
 
 
