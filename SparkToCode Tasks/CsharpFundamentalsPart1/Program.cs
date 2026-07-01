@@ -162,19 +162,53 @@ namespace CsharpFundamentalsPart1
             // Task 8:
             // Restaurant bill with membership discount
 
-            Console.WriteLine("Enter your bill amount: ");
-            float billAmount = float.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your bill amount: ");
+            //float billAmount = float.Parse(Console.ReadLine());
 
-            Console.WriteLine("Are you a member? (y/n)");
-            bool isMember = Console.ReadLine() == "y";
+            //Console.WriteLine("Are you a member? (y/n)");
+            //bool isMember = Console.ReadLine() == "y";
 
-            if (billAmount > 20 && isMember == true)
+            //if (billAmount > 20 && isMember == true)
+            //{
+            //    Console.WriteLine("You are a member and your bill is above 20. You get a 15% discount. Your total is: " + ((billAmount/100)*85));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Your price is: " + billAmount);
+            //}
+
+            // Task 9:
+            // Day Name Finder
+
+            Console.WriteLine("Enter a number between 1 and 7 to find out its corresponding day of the week: ");
+            int dayNum = int.Parse(Console.ReadLine());
+
+            switch (dayNum)
             {
-                Console.WriteLine("You are a member and your bill is above 20. You get a 15% discount. Your total is: " + ((billAmount/100)*85));
-            }
-            else
-            {
-                Console.WriteLine("Your price is: " + billAmount);
+                case 1:
+                    Console.WriteLine("1 = Sunday");
+                    break;
+                case 2:
+                    Console.WriteLine("2 = Monday");
+                    break;
+                case 3:
+                    Console.WriteLine("3 = Tuesday");
+                    break;
+                case 4:
+                    Console.WriteLine("4 = Wednesday");
+                    break;
+                case 5:
+                    Console.WriteLine("5 = Thursday");
+                    break;
+                case 6:
+                    Console.WriteLine("6 = Friday");
+                    break;
+                case 7:
+                    Console.WriteLine("7 = Saturday");
+                    break;
+                default:
+                    Console.WriteLine("Invalid number entered.");
+                    break;
             }
 
 
