@@ -55,34 +55,68 @@
             //Task 5: Number Guessing Game
 
             
-            int secretNum = 42;
-            int userAttempts = 0;
-            int userGuess;
+            //int secretNum = 42;
+            //int userAttempts = 0;
+            //int userGuess;
 
-            do 
+            //do 
+            //{
+            //    Console.WriteLine("Try to guess the number: ");
+            //    userGuess = int.Parse(Console.ReadLine());
+            //    if (userGuess > secretNum)
+            //    {
+            //        Console.WriteLine("Too high!");
+            //        userAttempts++;
+                    
+                    
+            //    }
+            //    else if (userGuess < secretNum)
+            //    {
+            //        Console.WriteLine("Too low!");
+            //        userAttempts++;
+                    
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Congratulations! You guessed the number. It took you " + userAttempts + "attempts.");
+            //    }
+
+            //}
+            //while (userGuess != secretNum);
+
+            //Task 6: Safe Division Calculator
+            
+            double userNum1 = 0;
+            double userNum2 = 0;
+            bool userInputValid = false;
+
+            do
             {
-                Console.WriteLine("Try to guess the number: ");
-                userGuess = int.Parse(Console.ReadLine());
-                if (userGuess > secretNum)
+                Console.WriteLine("Safe division calculator");
+                try
                 {
-                    Console.WriteLine("Too high!");
-                    userAttempts++;
-                    
-                    
+                    Console.WriteLine("Enter the first number: ");
+                    userNum1 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the second number: ");
+                    userNum2 = double.Parse(Console.ReadLine());
                 }
-                else if (userGuess < secretNum)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Too low!");
-                    userAttempts++;
-                    
-                }
-                else
-                {
-                    Console.WriteLine("Congratulations! You guessed the number. It took you " + userAttempts + "attempts.");
+                    Console.WriteLine("Invalid input. Please enter a number.");
+                    continue;
                 }
 
-            }
-            while (userGuess != secretNum);
+                if (userNum2 == 0)
+                {
+                    Console.WriteLine("Cannot divide by zero. Please enter a non-zero number.");
+                    continue;
+                }
+
+                userInputValid = true;
+
+            } while (!userInputValid);
+
+            Console.WriteLine("Result: " + (userNum1 / userNum2));
 
 
         }
