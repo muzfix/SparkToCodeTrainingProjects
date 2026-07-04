@@ -18,16 +18,27 @@
             //}
 
             //Task 2: Sum of numbers 1 to N
-            Console.WriteLine("Enter a positive whole number to calculate the sum from 1 to N: ");
-            int userNum = int.Parse(Console.ReadLine());
-            int userSum = 0;
+            //Console.WriteLine("Enter a positive whole number to calculate the sum from 1 to N: ");
+            //int userNum = int.Parse(Console.ReadLine());
+            //int userSum = 0;
 
-            for (int i = userNum; i > 0; i--)
+            //for (int i = userNum; i > 0; i--)
+            //{
+            //    userSum += i;
+            //}
+
+            //Console.WriteLine("Sum of numbers from 1 to " + userNum + " is: " + userSum);
+
+            //Task 3: Multiplication Table
+
+            Console.WriteLine("Enter a number to display its multiplication table: ");
+            int userNum2 = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i < 11; i++)
             {
-                userSum += i;
+                Console.WriteLine(i*userNum2);
             }
 
-            Console.WriteLine("Sum of numbers from 1 to " + userNum + " is: " + userSum);
 
 
 
