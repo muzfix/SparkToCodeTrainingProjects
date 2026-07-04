@@ -31,15 +31,26 @@
 
             //Task 3: Multiplication Table
 
-            Console.WriteLine("Enter a number to display its multiplication table: ");
-            int userNum2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a number to display its multiplication table: ");
+            //int userNum2 = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i < 11; i++)
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    Console.WriteLine( userNum2 + " * " + i + " = " + (i*userNum2));
+            //}
+
+            //Task 4: Password Retry
+
+            Console.WriteLine("Enter the password: ");
+            string userPass = Console.ReadLine();
+            
+            while (userPass != "Spark2026")
             {
-                Console.WriteLine( userNum2 + " * " + i + " = " + (i*userNum2));
+                Console.WriteLine("Incorrect password. Try again: ");
+                userPass = Console.ReadLine();
             }
 
-
+            Console.WriteLine("Access Granted");
 
 
 
