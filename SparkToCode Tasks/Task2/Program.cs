@@ -36,7 +36,7 @@
 
             for (int i = 1; i < 11; i++)
             {
-                Console.WriteLine(i*userNum2);
+                Console.WriteLine( userNum2 + " * " + i + " = " + (i*userNum2));
             }
 
 
