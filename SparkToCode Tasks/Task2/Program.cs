@@ -120,44 +120,60 @@
 
             //Task 7: Repeating Menu with Exit Option
 
-            Console.WriteLine("Menu Program: ");
+            //Console.WriteLine("Menu Program: ");
 
-            do
+            //do
+            //{
+            //    Console.WriteLine("1. Say Hello");
+            //    Console.WriteLine("2. Show Current Time-of-day greeting");
+            //    Console.WriteLine("3. Exit");
+
+            //    try
+            //    {
+
+            //        Console.WriteLine("Please choose an option: ");
+
+            //        int userChoice = int.Parse(Console.ReadLine());
+            //        switch (userChoice)
+            //        {
+            //            case 1:
+            //                Console.WriteLine("Hello!");
+            //                break;
+            //            case 2:
+            //                Console.WriteLine("Hello it's 10:30pm");
+            //                break;
+            //            case 3:
+            //                Console.WriteLine("Exiting the program.");
+            //                return;
+
+            //            default:
+            //                Console.WriteLine("Invalid choice. Please try again.");
+            //                break;
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        Console.WriteLine("Invalid input. Please enter a number.");
+            //        continue;
+            //    }
+            //} while (true);
+
+
+            // Task 8: Sum of Even Numbers Only
+
+            Console.WriteLine("Enter a positive integer to calculate the sum of even numbers from 1 to N: ");
+            int userInput4 = int.Parse(Console.ReadLine());
+            int evenSumcount = 0;
+
+            for (int i = 0; i <= userInput4 ; i+=2)
             {
-                Console.WriteLine("1. Say Hello");
-                Console.WriteLine("2. Show Current Time-of-day greeting");
-                Console.WriteLine("3. Exit");
-
-                try
+                if (i % 2 == 0)
                 {
-
-                    Console.WriteLine("Please choose an option: ");
-
-                    int userChoice = int.Parse(Console.ReadLine());
-                    switch (userChoice)
-                    {
-                        case 1:
-                            Console.WriteLine("Hello!");
-                            break;
-                        case 2:
-                            Console.WriteLine("Hello it's 10:30pm");
-                            break;
-                        case 3:
-                            Console.WriteLine("Exiting the program.");
-                            return;
-
-                        default:
-                            Console.WriteLine("Invalid choice. Please try again.");
-                            break;
-                    }
+                    evenSumcount += i;
                 }
-                catch (Exception)
-                {
-                    Console.WriteLine("Invalid input. Please enter a number.");
-                    continue;
-                }
-            } while (true);
+            }
 
+            Console.WriteLine("The sum of even numbers from 1 to " + userInput4 + " is: " + evenSumcount);
 
         }
     }
