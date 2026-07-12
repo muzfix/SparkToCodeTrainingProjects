@@ -79,23 +79,32 @@
             //}
 
             //Task 8 Membership Expiry Checker
-            Console.WriteLine("Enter your membership start date (yyyy-mm-dd): ");
-            DateTime userStartdate = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the number of valid days for your membership: ");
-            int userValidDays = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your membership start date (yyyy-mm-dd): ");
+            //DateTime userStartdate = DateTime.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the number of valid days for your membership: ");
+            //int userValidDays = int.Parse(Console.ReadLine());
 
-            DateTime memberChecker = userStartdate.AddDays(userValidDays);
+            //DateTime memberChecker = userStartdate.AddDays(userValidDays);
 
-            Console.WriteLine("User membership started on: " + userStartdate.ToString("yyyy-MM-dd") + " and is scheduled to end on: " + memberChecker.ToString("yyyy-MM-dd"));
+            //Console.WriteLine("User membership started on: " + userStartdate.ToString("yyyy-MM-dd") + " and is scheduled to end on: " + memberChecker.ToString("yyyy-MM-dd"));
 
-            if (DateTime.Today > memberChecker)
-            {
-                Console.WriteLine("Membership Status: expired.");
-            }
-            else
-            {
-                Console.WriteLine("Membership status: valid.");
-            }
+            //if (DateTime.Today > memberChecker)
+            //{
+            //    Console.WriteLine("Membership Status: expired.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Membership status: valid.");
+            //}
+
+            //Task 9 HARD: Round up / Round down explorer
+            
+            Console.WriteLine("Enter a decimal number: ");
+            decimal userDecimal = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Your number rounded up is: " + Math.Ceiling(userDecimal));
+
+            Console.WriteLine("Your number rounded down is: " + Math.Floor(userDecimal));
 
 
 
