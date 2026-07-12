@@ -63,20 +63,41 @@
             //}
 
             //Task 7 Clean Name Comparator
-            Console.WriteLine("Enter first name: ");
-            string firstName = Console.ReadLine();
-            Console.WriteLine("Enter second name: ");
-            string secondName = Console.ReadLine();
-            string trimName1 = firstName.Trim();
-            string trimName2 = secondName.Trim();
-            if (trimName1.ToUpper() == trimName2.ToUpper())
+            //Console.WriteLine("Enter first name: ");
+            //string firstName = Console.ReadLine();
+            //Console.WriteLine("Enter second name: ");
+            //string secondName = Console.ReadLine();
+            //string trimName1 = firstName.Trim();
+            //string trimName2 = secondName.Trim();
+            //if (trimName1.ToUpper() == trimName2.ToUpper())
+            //{
+            //    Console.WriteLine("Matching names.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No Match.");
+            //}
+
+            //Task 8 Membership Expiry Checker
+            Console.WriteLine("Enter your membership start date (yyyy-mm-dd): ");
+            DateTime userStartdate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the number of valid days for your membership: ");
+            int userValidDays = int.Parse(Console.ReadLine());
+
+            DateTime memberChecker = userStartdate.AddDays(userValidDays);
+
+            Console.WriteLine("User membership started on: " + userStartdate.ToString("yyyy-MM-dd") + " and is scheduled to end on: " + memberChecker.ToString("yyyy-MM-dd"));
+
+            if (DateTime.Today > memberChecker)
             {
-                Console.WriteLine("Matching names.");
+                Console.WriteLine("Membership Status: expired.");
             }
             else
             {
-                Console.WriteLine("No Match.");
+                Console.WriteLine("Membership status: valid.");
             }
+
+
 
         }
     }
