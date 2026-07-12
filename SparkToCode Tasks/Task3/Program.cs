@@ -29,19 +29,25 @@
             //Console.WriteLine("The number of characters in the name you entered is: " + userName.Length);
 
             //Task 4 Subscription end date 
-            Console.WriteLine("Enter the number of days for your trial that starts today: ");
-            int userTrial = int.Parse(Console.ReadLine());
-            DateTime trial = DateTime.Today.AddDays(userTrial);
+            //Console.WriteLine("Enter the number of days for your trial that starts today: ");
+            //int userTrial = int.Parse(Console.ReadLine());
+            //DateTime trial = DateTime.Today.AddDays(userTrial);
 
-            Console.WriteLine("Your trial starts today and ends on: " + trial.ToString("yyyy-MM-dd"));
+            //Console.WriteLine("Your trial starts today and ends on: " + trial.ToString("yyyy-MM-dd"));
 
+            //Task 5 Grade Rounding System
+            Console.WriteLine("Enter your raw exam score as a decimal number e.g. 74.6: ");
+            decimal userGrade = decimal.Parse(Console.ReadLine());
 
+            if (Math.Round(userGrade) >= 60)
+            {
+                Console.WriteLine("Your rounded grade is: " + Math.Round(userGrade) + " , you have passed.");
 
-
-
-
-
-
+            }
+            else
+            {
+                Console.WriteLine("Your rounded grade is: " + Math.Round(userGrade) + " and you have failed the exam.");
+            }
 
         }
     }
