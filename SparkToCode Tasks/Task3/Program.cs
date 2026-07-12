@@ -36,17 +36,30 @@
             //Console.WriteLine("Your trial starts today and ends on: " + trial.ToString("yyyy-MM-dd"));
 
             //Task 5 Grade Rounding System
-            Console.WriteLine("Enter your raw exam score as a decimal number e.g. 74.6: ");
-            decimal userGrade = decimal.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your raw exam score as a decimal number e.g. 74.6: ");
+            //decimal userGrade = decimal.Parse(Console.ReadLine());
 
-            if (Math.Round(userGrade) >= 60)
+            //if (Math.Round(userGrade) >= 60)
+            //{
+            //    Console.WriteLine("Your rounded grade is: " + Math.Round(userGrade) + " , you have passed.");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Your rounded grade is: " + Math.Round(userGrade) + " and you have failed the exam.");
+            //}
+
+            //Task 6 Password Strength Checker
+            Console.WriteLine("Enter a password: ");
+            string passUser = Console.ReadLine();
+
+            if (passUser.Length < 8 || passUser.Contains("password") || passUser.Contains("Password") || passUser.Contains("PASSWORD"))
             {
-                Console.WriteLine("Your rounded grade is: " + Math.Round(userGrade) + " , you have passed.");
-
+                Console.WriteLine("Weak password: Password must be at least 8 characters long.");
             }
             else
             {
-                Console.WriteLine("Your rounded grade is: " + Math.Round(userGrade) + " and you have failed the exam.");
+                Console.WriteLine("Strong password: Your password meets all the requirements.");
             }
 
         }
