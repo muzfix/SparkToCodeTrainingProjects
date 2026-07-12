@@ -15,11 +15,19 @@
 
             //Task 2 Power & Root Explorer
 
-            Console.WriteLine("Enter a number: ");
-            double userNum = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a number: ");
+            //double userNum = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("The number " + userNum + " to the power of 2 is " + Math.Pow(userNum,2)  );
-            Console.WriteLine("The square root of " + userNum + " is " + Math.Sqrt(userNum));
+            //Console.WriteLine("The number " + userNum + " to the power of 2 is " + Math.Pow(userNum,2)  );
+            //Console.WriteLine("The square root of " + userNum + " is " + Math.Sqrt(userNum));
+
+            //Task 3 Name Formatter
+            Console.WriteLine("Enter your full name: ");
+            string userName = Console.ReadLine();
+            Console.WriteLine("Your name in uppercase: " + userName.ToUpper());
+            Console.WriteLine("Your name in uppercase: " + userName.ToLower());
+            Console.WriteLine("The number of characters in the name you entered is: " + userName.Length);
+
 
 
 
