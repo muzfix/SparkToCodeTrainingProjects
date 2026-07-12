@@ -107,24 +107,26 @@
             //Console.WriteLine("Your number rounded down is: " + Math.Floor(userDecimal));
 
             //Task 10: Word Position Finder
-            Console.WriteLine("Enter a sentence: ");
-            string userSentence = Console.ReadLine();
-            Console.WriteLine("Enter a single word to search for: ");
-            string userWord = Console.ReadLine();
+            //Console.WriteLine("Enter a sentence: ");
+            //string userSentence = Console.ReadLine();
+            //Console.WriteLine("Enter a single word to search for: ");
+            //string userWord = Console.ReadLine();
 
-            int foundWordFirst = userSentence.IndexOf(userWord);
-            int foundWordLast = userSentence.LastIndexOf(userWord);
-            int foundWordLength = userWord.Length;
+            //int foundWordFirst = userSentence.IndexOf(userWord);
+            //int foundWordLast = userSentence.LastIndexOf(userWord);
+            //int foundWordLength = userWord.Length;
 
-            if (foundWordFirst == -1)
-            {
-                Console.WriteLine("The word you searched for is not found in the sentence.");
-            }
-            else
-            {
-                Console.WriteLine("The word you searched for is found at position: " + foundWordFirst);
-                Console.WriteLine("The last occurrence of the word you searched for is found at position: " + foundWordLast);
-            }
+            //if (foundWordFirst == -1)
+            //{
+            //    Console.WriteLine("The word you searched for is not found in the sentence.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The word you searched for is found at position: " + foundWordFirst);
+            //    Console.WriteLine("The last occurrence of the word you searched for is found at position: " + foundWordLast);
+            //}
+
+            
 
             
 
