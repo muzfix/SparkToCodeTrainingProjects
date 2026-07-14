@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="CsharpFundamentalsPart1/Task1.csproj" Id="2e98dfcf-d641-43a7-9b2e-332b03fe3cfa" />
+  <Project Path="Functions/Functions.csproj" Id="1a83b17c-5d0d-474f-adde-e6ede5a2b8e1" />
   <Project Path="FunctionsPractice/FunctionsPractice.csproj" Id="456db167-9a09-45b6-b63e-6ce983a704c8" />
   <Project Path="LoopsPractice/LoopsPractice.csproj" Id="dc02933a-e1b1-4505-b270-4e8e3ee9cf3d" />
   <Project Path="SparkToCode_program1/SparkToCode_program1.csproj" />

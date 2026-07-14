@@ -72,7 +72,9 @@
                 Console.WriteLine("Invalid name, please try again. ");
 
             }
-            }
+
+            // User Defined Functions
+            
         }
     }
 }
