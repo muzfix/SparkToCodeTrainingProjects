@@ -32,17 +32,27 @@
             //}
             
             //Task 3: Browsing History Stack
-            Stack<string> browserHistory = new Stack<string>();
+            //Stack<string> browserHistory = new Stack<string>();
             
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.WriteLine("Enter a website URL: ");
+            //    browserHistory.Push(Console.ReadLine());
+            //}
+            //browserHistory.Pop();
+            //Console.WriteLine(browserHistory.Peek());
+
+            //Task 4: Customer Service Queue 
+            Queue<string> customerQueue = new Queue<string>();
 
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("Enter a website URL: ");
-                browserHistory.Push(Console.ReadLine());
+                Console.WriteLine("Enter customer name: ");
+                customerQueue.Enqueue(Console.ReadLine());
             }
-            browserHistory.Pop();
-            Console.WriteLine(browserHistory.Peek());
-
+            string firstCustomerRemoved = customerQueue.Dequeue();
+            Console.WriteLine("The customer that has just been served is: " +  firstCustomerRemoved);
         }
     }
 }
