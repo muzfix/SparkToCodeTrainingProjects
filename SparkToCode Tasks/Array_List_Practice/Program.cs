@@ -104,10 +104,55 @@
             }
 
 
+            ////////////////////////////////////////////////////////////////////////////////////////
+            // STACKS AND QUEUES
 
+            //in stack and queue, the ORDER of elements is important
+            //so we will use a different data structure to store them
 
+            // Stack => dynamic size, same data type, LIFO (last in first out)
+            // examples: undo/redo, browser history, call stack, etc
+            //stack<type> stackName = new Stack<type>(); //syntax to declare a list
 
+            Stack<string> browserHistory = new Stack<string>(); // declare stack to hold browser history
+            browserHistory.Push("google.com"); //add a value to the stack
+            browserHistory.Push("amazon.com"); //add a value to the stack
+            browserHistory.Push("amazon.com/sell"); //add a value to the stack => Last In
 
+            string result = browserHistory.Peek(); //get the value of the top element of the stack without removing it
+
+            string result2 = browserHistory.Pop(); //remove the top element of the stack (amazon.com/sell) last out
+
+            int stackLength = browserHistory.Count(); // get the num of elements in the stack
+
+            //foreach syntax
+            // foreach( type  varName  in collection collectionName  )
+
+            // print all the elements in the stack using a foreach loop
+            Console.WriteLine("Browser history: ");
+            foreach (string url in browserHistory)
+            {
+                Console.WriteLine(url);
+            }
+
+            // Queue => dynamic size, same data type, FIFO (first in first out) / first come first serve
+            // examples: customer service, ticketing system, print queue, etc. 
+            //Queue<type> queueName = new Queue<type>(); //syntax to declare a queue 
+            Queue<int> customerNumber = new Queue<int>();
+            customerNumber.Enqueue(1); // adding customer number 1 to the queue => First In
+            customerNumber.Enqueue(2); // adding customer number 2 to the queue
+            customerNumber.Enqueue(3); // adding customer number 3 to the queue
+
+            int firstCustomer = customerNumber.Peek(); // get the value of the first element of the queue without removing it
+            int firstCustomerRemoved = customerNumber.Dequeue(); //Remove the first element of the queue (customer number 1) => First Out
+            int queueLength = customerNumber.Count(); // get the number of elements in the queue
+
+            //print all the elements in the queue using a foreach loop
+            Console.WriteLine("Customer Numbers: ");
+            foreach (int number in customerNumber)
+            {
+                Console.WriteLine(number);
+            }
 
         }
 
