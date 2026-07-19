@@ -15,7 +15,7 @@
 
         public class BankAccount
         {
-            // properties
+            // properties (store multiple data / information)
             public int AccountNumber { get; set; }
             public string HolderName { get; set; }
             public double Balance { get; set; }
@@ -25,6 +25,7 @@
             public void Deposit(double Amount)
             {
                 Balance += Amount;
+                SendEmail();
             }
 
 
@@ -34,26 +35,60 @@
                 {
                     Balance -= amount;
                 }
+                SendEmail();
 
             }
 
             public double CheckBalance()
             {
+                PrintInformation();
                 return Balance;
             }
+
+            private void PrintInformation()
+            {
+                Console.WriteLine("Name: " + HolderName);
+                Console.WriteLine("Balance: " + Balance);
+
+            }
+
+            public void Register(string Email)
+            {
+                email = Email;
+
+                SendEmail();
+            }
+
+            private void SendEmail()
+            {
+                //code to send email with operation information
+            }
+
         }
         class Student
-            {
-                // properties (store multiple data / information)
-                public int Grade { get; set; }
-                public string Name { get; set; }
-                public string Address { get; set; }
-                private string email { get; set; } // private property,
+        {
+            // properties (store multiple data / information)
+            public int Grade { get; set; }
+            public string Name { get; set; }
+            public string Address { get; set; }
+            private string email { get; set; } // private property,
                                                    // can only be accessed within the class
-                int age { get; set; } // default access: private property; can only be accessed within the class
+            int age { get; set; } // default access: private property; can only be accessed within the class
 
-                //methods (functions)
+            //methods (functions)
+            public void Register(string Email)
+            {
+                email = Email;
+
+                SendEmail();
             }
+                
+            private void SendEmail()
+            {
+                //code to send email
+            }
+                
+        }
 
 
         static void Main(string[] args)
@@ -76,7 +111,8 @@
             s1.Name = "Ali";
             s1.Address = "Muscat";
             s1.Grade = 65;
-            // s1.email = "muhannad@gmail"; // cannot be accessed; private property outside the class
+            // s1.email = "muhannad@gmail.com"; // cannot be accessed; private property outside the class
+            s1.Register("muhannad@gmail.com");
 
             Console.WriteLine("Student Name: " + s1.Name);
             Console.WriteLine("Student Address: " + s1.Address);
@@ -91,14 +127,16 @@
 
             /////////////////////////////////////////////////////////
             //Access Modifiers (public, private, protected, internal)
+            // how to use proper access modifier ( Encapsulation )
             /////////////////////////////////////////////////////////
-                
+            
 
             BankAccount B1 = new BankAccount();
             B1.AccountNumber = 1163;
             B1.HolderName = "Ahmed";
             B1.Balance = 120;
 
+            // B1.PrintInformation(); // Cant work due to its class protection level
             double result1 = B1.CheckBalance();
             B1.Deposit(30);
             
