@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="DatabaseTasks/Airport_ERD_testtask1_ALMOST_DONE.drawio.png" />
+    <File Path="DatabaseTasks/Company_diagram.drawio.png" />
+    <File Path="DatabaseTasks/Final_college_mapping.drawio.png" />
   </Folder>
   <Project Path="Array_List_Practice/Array_List_Practice.csproj" Id="c9a72606-6537-4769-8174-c5bc5832fa68" />
   <Project Path="CsharpFundamentalsPart1/Task1.csproj" Id="2e98dfcf-d641-43a7-9b2e-332b03fe3cfa" />
